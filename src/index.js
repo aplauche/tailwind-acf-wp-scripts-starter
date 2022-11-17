@@ -1,6 +1,5 @@
 import './css/main.css'
 
-import siteMenu from './modules/menu'
+import exampleModule from './modules/example'
 
-// BURGER MENU
-siteMenu();
+exampleModule();
