@@ -1,0 +1,32 @@
+{
+  "name": "underscores",
+  "version": "1.0.0",
+  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
+  "author": "Automattic Theme Team",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Automattic/_s#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.0.0",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-import": "^15.0.0",
+    "postcss-loader": "^7.0.1",
+    "tailwindcss": "^3.1.8",
+    "browser-sync": "^2.27.10",
+    "glob": "^8.0.3",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "theme-start": "wp-scripts start src/index.js --output-path=build/theme",
+    "theme-build": "wp-scripts build src/index.js --output-path=build/theme",
+    "blocks-start": "wp-scripts start --webpack-src-dir=blocks --webpack-copy-php --output-path=build/blocks",
+    "blocks-build": "wp-scripts build --webpack-src-dir=blocks --webpack-copy-php --output-path=build/blocks",
+    "dev": "npm-run-all --parallel blocks-start theme-start",
+    "build": "npm-run-all --parallel blocks-build theme-build"
+  },
+  "dependencies": {}
+}
